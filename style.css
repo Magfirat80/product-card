@@ -10,8 +10,8 @@
 }
 
 .flowers {
-  display:block;
-  position:absolute;
+  display: block;
+  position: absolute;
   background: url(./images/flowers.png);
   background-repeat: no-repeat;
   margin-left: 85px;
@@ -28,15 +28,15 @@
   vertical-align: middle;
   width: 846px;
   height: 78px;
-  position:relative;
+  position: relative;
   margin-top: 220px;
   margin-left: 217px;
   margin-right: 217px;
 }
 
 .product-cards {
-  display:block;
-  position:relative;
+  display: block;
+  position: relative;
   margin-left: 85px;
   margin-right: 85px;
   margin-top: 110px;
