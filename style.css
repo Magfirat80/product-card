@@ -20,7 +20,7 @@
   top: 0px;
 }
 
-.product-select {
+.main-header {
   font-weight: 400;
   font-size: 70px;
   line-height: 78px;
@@ -131,6 +131,6 @@
   font-size: 12px;
 }
 
-.second-color {
+.bg-aqua {
   background-color: aqua;
 }

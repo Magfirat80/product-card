@@ -2,20 +2,20 @@
 
 //Кнопка окрашивания первой карточки
 const firstProductCard = document.querySelector('.card-container');
-const changeColorFirstCardButton = document.querySelector('#change-color-first_card-button');
-const colorHashFirst = '#250580';
+const changeColorFirstCardButton = document.querySelector('#change-color-first-card-button');
+const secondColorFirstCard = '#250580';
 
 changeColorFirstCardButton.addEventListener('click', () => {
-  firstProductCard.style.backgroundColor = colorHashFirst
+  firstProductCard.style.backgroundColor = secondColorFirstCard
 })
 
 //Кнопка окрашивания всех карточек
 const productCards = document.querySelectorAll('.card-container');
-const changeColorAllCardButton = document.querySelector('#change-color-all_card-button');
-const colorHashAll = '#802505';
+const changeColorAllCardsButton = document.querySelector('#change-color-all-cards-button');
+const secondColorAllCards = '#802505';
 
-changeColorAllCardButton.addEventListener('click', () => {
-  productCards.forEach((card) => {card.style.backgroundColor = colorHashAll
+changeColorAllCardsButton.addEventListener('click', () => {
+  productCards.forEach((card) => {card.style.backgroundColor = secondColorAllCards
   })
 })
 
@@ -25,7 +25,7 @@ const openGoogleButton = document.querySelector('#open-google-button');
 openGoogleButton.addEventListener('click', openGoogle)
 
 function openGoogle() {
-  const answer = confirm ('Вы действительно хотите открыть Google?')
+  const answer = confirm('Вы действительно хотите открыть Google?')
   if (answer === true) {
     window.open('https://google.com')
   } else {
@@ -34,12 +34,11 @@ function openGoogle() {
 }
 
 // Кнопка вывода предупреждения и сообщения в консоль
-const outputAlertAndMessageToConsoleLogButton = document.querySelector('#output-alert-and-message-to-console-log-button');
-const productSelect = document.querySelector('.product-select');
+const alertAndMessageToConsoleButton = document.querySelector('#alert-and-message-to-console-button');
 
-outputAlertAndMessageToConsoleLogButton.addEventListener('click', () => outputMessageToConsoleLog('ДЗ №4'))
+alertAndMessageToConsoleButton.addEventListener('click', () => outputAlertAndMessageToConsole('ДЗ №4'))
 
-function outputMessageToConsoleLog(message) {
+function outputAlertAndMessageToConsole(message) {
   alert(message)
   console.log(message)
 }
@@ -48,14 +47,14 @@ function outputMessageToConsoleLog(message) {
 const changeOwnColorButton = document.querySelector('#change-own-color-button');
 
 changeOwnColorButton.addEventListener('click', () => {
-  changeOwnColorButton.classList.toggle('second-color')
+  changeOwnColorButton.classList.toggle('bg-aqua')
 })
 
-// При наведении на главный заголовок ("Выбери свой продукт") - он выводится в консоль. (контент элемента)
-const headerProductSelect = document.querySelector('.product-select');
+// При наведении на главный заголовок ("Выбери свой продукт") - он выводится в консоль.
+const mainHeader = document.querySelector('.main-header');
 
-headerProductSelect.addEventListener('mouseover', outputToConsoleLog);
+mainHeader.addEventListener('mouseover', outputToConsole);
 
-function outputToConsoleLog() {
-  console.log(headerProductSelect.textContent)
+function outputToConsole() {
+  console.log(mainHeader.textContent)
 }
