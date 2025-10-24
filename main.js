@@ -3,19 +3,19 @@
 //Кнопка окрашивания первой карточки
 const firstProductCard = document.querySelector('.card-container');
 const changeColorFirstCardButton = document.querySelector('#change-color-first-card-button');
-const secondColorFirstCard = '#250580';
+const ultramarineColor = '#250580';
 
 changeColorFirstCardButton.addEventListener('click', () => {
-  firstProductCard.style.backgroundColor = secondColorFirstCard
+  firstProductCard.style.backgroundColor = ultramarineColor
 })
 
 //Кнопка окрашивания всех карточек
 const productCards = document.querySelectorAll('.card-container');
 const changeColorAllCardsButton = document.querySelector('#change-color-all-cards-button');
-const secondColorAllCards = '#802505';
+const teaColor = '#802505';
 
 changeColorAllCardsButton.addEventListener('click', () => {
-  productCards.forEach((card) => {card.style.backgroundColor = secondColorAllCards
+  productCards.forEach((card) => {card.style.backgroundColor = teaColor
   })
 })
 
