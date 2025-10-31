@@ -36,7 +36,7 @@ checkSpeed(350);
 const nameProduct = 'Хлеб';
 const priceProduct = 45;
 
-function checkBuyOpportunity (budget) {
+function buyingProduct(budget) {
   if (budget >= priceProduct) {
     console.log(`${nameProduct} прибретен. Спасибо за покупку!`)
   } else {
@@ -44,14 +44,14 @@ function checkBuyOpportunity (budget) {
   }
 }
 
-checkBuyOpportunity(50);
+buyingProduct(50);
 
 /* 6. Создать 1 функцию и именовать её по своему усмотрению */
 
-const loginCurrent = 'AdminITSim'
-const passwordCurrent = 'JSTSAng'
+const currentLogin = 'AdminITSim'
+const currenPassword = 'JSTSAng'
 function checkAccess(login, password) {
-  if (login === loginCurrent && password === passwordCurrent) {
+  if (login === currentLogin && password === currenPassword) {
     console.log('Access is allowed!')
   } else {
     console.log('Access is denied!')
@@ -67,4 +67,4 @@ let nameStudent = 'John';
 
 let sizeShoes = 42;
 
-let maritalStatus = true;
+let isMarried = true;
