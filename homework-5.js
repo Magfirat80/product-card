@@ -36,7 +36,7 @@ checkSpeed(350);
 const nameProduct = 'Хлеб';
 const priceProduct = 45;
 
-function buyingProduct(budget) {
+function buyProduct(budget) {
   if (budget >= priceProduct) {
     console.log(`${nameProduct} прибретен. Спасибо за покупку!`)
   } else {
@@ -44,7 +44,7 @@ function buyingProduct(budget) {
   }
 }
 
-buyingProduct(50);
+buyProduct(50);
 
 /* 6. Создать 1 функцию и именовать её по своему усмотрению */
 
