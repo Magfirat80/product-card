@@ -27,23 +27,24 @@ const carInfo = {
   transmission: 'AT'
 }
 
-const driverCard = {...userInfo, ...carInfo};
+const {name: ownerName, surname: ownerSurname, age: ownerAge} = userInfo;
+const driverCard = {ownerName, ownerSurname, ownerAge, ...carInfo};
 console.log('Карточка водителя:', driverCard);
 
 /*5. Написать функцию которая аргументом будет принимать объект, описанный в пункте №4. Она проверяет, есть ли 
 в объекте свойство "максимальная скорость", если нет - добавляет его и задает значение, если есть - 
 прекращает выполнение (ничего не делает)*/
 
-function checkSpeedMax(driverCard) {
-  if ('speedMax' in driverCard) {
-    return
+function checkMaxSpeed(driverCard) {
+  if ('maxSpeed' in driverCard) {
+    return driverCard;
   } else {
-    speedMax = prompt('Введите значение максимальной скорости', '-');
-    driverCardWithSpeed = {...driverCard, speedMax}
+    const maxSpeed = prompt('Введите значение максимальной скорости', '-');
+    return {...driverCard, maxSpeed}
   }
 }
 
-checkSpeedMax(driverCard);
+const driverCardWithSpeed = checkMaxSpeed(driverCard);
 console.log('Карточка водителя со скоростью:', driverCardWithSpeed);
 
 /*6. Написать функцию, которая получает первым аргументом  — объект, а вторым аргументом — свойство 
@@ -58,44 +59,101 @@ const studentInfo = {
   formEducation: 'full-time'
 }
 
-function showInfoOnRequest(studentInfo, keyIn = prompt('Введите ключ(свойство) объекта', 'key')) {
+function showInfoAboutStudent(studentInfo, keyIn = prompt('Введите ключ(свойство) объекта: (name, surname, specialization, course, fakultet или formEducation)', 'key')) {
   console.log(`${keyIn}:`, studentInfo[keyIn])
 }
 
-showInfoOnRequest(studentInfo);
+showInfoAboutStudent(studentInfo);
 
 /*7. Создать массив, который содержит названия продуктов (просто строки)*/
-const namesProducts = ['хлеб', 'макароны', 'мука', 'сахар', 'соль', 'картофель'];
-console.log('Названия продуктов:', namesProducts);
+const products = ['хлеб', 'макароны', 'мука', 'сахар', 'соль', 'картофель'];
+console.log('Названия продуктов:', products);
 
 /*8. Создать массив, состоящий из объектов, где объект представляет собой книгу (название, автор, год выпуска, 
 цвет обложки, жанр) (3-5 книг). После, используя известный нам метод массив, добавить еще одну книгу в конец 
 списка. Можете заменить книги на фильмы, или другую сущность, идею вы поняли.*/
 
-const booksForeign = [
-  {name: 'Унесенные ветром', author: 'Маргарет Митчелл', firstPublished: 1936, genre: 'роман'},
-  {name: 'Зеленая миля', author: 'Стивен Кинг', firstPublished: 1996, genre: 'роман'},
-  {name: 'Собака Баскервилей', author: 'Артур Конан Дойл', firstPublished: 1901, genre: 'детектив'},
-  {name: 'Властелин колец', author: 'Джон Р. Р. Толкин', firstPublished: 1955, genre: 'фэнтези'},
-  {name: 'Крестный отец', author: 'Марио Пьюзо', firstPublished: 1969, genre: 'роман'}
+const foreignBooks = [
+  {
+    name: 'Унесенные ветром',
+    author: 'Маргарет Митчелл',
+    firstPublished: 1936,
+    genre: 'роман'
+  },
+  {
+    name: 'Зеленая миля',
+    author: 'Стивен Кинг',
+    firstPublished: 1996,
+    genre: 'роман'
+  },
+  {
+    name: 'Собака Баскервилей',
+    author: 'Артур Конан Дойл',
+    firstPublished: 1901,
+    genre: 'детектив'
+  },
+  {
+    name: 'Властелин колец',
+    author: 'Джон Р. Р. Толкин',
+    firstPublished: 1955,
+    genre: 'фэнтези'
+  },
+  {
+    name: 'Крестный отец',
+    author: 'Марио Пьюзо',
+    firstPublished: 1969,
+    genre: 'роман'
+  }
 ]
 
-booksForeign.push({name: 'Побег из Шоушенка', author: 'Стивен Кинг', firstPublished: 1982, genre: 'повесть'});
+foreignBooks.push(
+  {
+    name: 'Побег из Шоушенка', 
+    author: 'Стивен Кинг', 
+    firstPublished: 1982, 
+    genre: 'повесть'
+  }
+);
 
 /*9. Создать еще один массив, состоящих из тех же книг, но относящийся к определенной вселенной (Гарри Поттер, 
 Марвел и так далее). (Если используете другую, свою сущность - импровизируйте). С помощью известного нам метода 
 массива или оператора (рекомендую использовать оператор), объединить эти два массива в один*/
 
-const booksDomestic = [
-  {name: 'А зори здесь тихие...', author: 'Борис Васильев', firstPublished: 1969, genre: 'повесть'},
-  {name: 'Мастер и Маргарита', author: 'Михаил Булгаков', firstPublished: 1940, genre: 'роман'},
-  {name: 'Поселок', author: 'Кир Булычев', firstPublished: 1984, genre: 'научная фантастика'},
-  {name: 'В списках не значился', author: 'Борис Васильев', firstPublished: 1974, genre: 'повесть'},
-  {name: 'Два капитана', author: 'Вениамин Каверин', firstPublished: 1944, genre: 'роман'}
+const domesticBooks = [
+  {
+    name: 'А зори здесь тихие...', 
+    author: 'Борис Васильев', 
+    firstPublished: 1969, 
+    genre: 'повесть'
+  },
+  {
+    name: 'Мастер и Маргарита', 
+    author: 'Михаил Булгаков', 
+    firstPublished: 1940, 
+    genre: 'роман'
+  },
+  {
+    name: 'Поселок', 
+    author: 'Кир Булычев', 
+    firstPublished: 1984, 
+    genre: 'научная фантастика'
+  },
+  {
+    name: 'В списках не значился', 
+    author: 'Борис Васильев', 
+    firstPublished: 1974, 
+    genre: 'повесть'
+  },
+  {
+    name: 'Два капитана', 
+    author: 'Вениамин Каверин', 
+    firstPublished: 1944, 
+    genre: 'роман'
+  }
 ]
 
-const booksWorld = [...booksForeign, ...booksDomestic];
-console.log('Мировая литература:', booksWorld)
+const worldBooks = [...foreignBooks, ...domesticBooks];
+console.log('Мировая литература:', worldBooks)
 
 /*10. Почитать про метод массива — forEach. Написать функцию, которая принимает массив сущностей с задания №9. 
 Добавляем новое свойство для объекта "isRare (это редкий)" и в зависимости от года выпуска книги
@@ -104,9 +162,9 @@ console.log('Мировая литература:', booksWorld)
 
  //  isAfterWar - признак выпуска книги после ВОВ
 
-booksWorld2 = structuredClone(booksWorld);
+worldBooks2 = structuredClone(worldBooks);
 
-booksWorld2.forEach(book => {
+worldBooks2.forEach(book => {
   if (book.firstPublished > 1945) {
     book.isAfterWar = true
   } else {
