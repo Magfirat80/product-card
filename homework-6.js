@@ -27,25 +27,24 @@ const carInfo = {
   transmission: 'AT'
 }
 
-const {name: ownerName, surname: ownerSurname, age: ownerAge} = userInfo;
-const driverCard = {ownerName, ownerSurname, ownerAge, ...carInfo};
-console.log('Карточка водителя:', driverCard);
+carInfo.owner = userInfo;
+console.log('Информация об автомобиле и его владельце:', carInfo);
 
 /*5. Написать функцию которая аргументом будет принимать объект, описанный в пункте №4. Она проверяет, есть ли 
 в объекте свойство "максимальная скорость", если нет - добавляет его и задает значение, если есть - 
 прекращает выполнение (ничего не делает)*/
 
-function checkMaxSpeed(driverCard) {
-  if ('maxSpeed' in driverCard) {
-    return driverCard;
+function checkMaxSpeed(carInfo) {
+  if ('maxSpeed' in carInfo) {
+    return carInfo;
   } else {
-    const maxSpeed = prompt('Введите значение максимальной скорости', '-');
-    return {...driverCard, maxSpeed}
+    const maxSpeed = prompt('Введите значение максимальной скорости автомобиля', '-');
+    return {...carInfo, maxSpeed}
   }
 }
 
-const driverCardWithSpeed = checkMaxSpeed(driverCard);
-console.log('Карточка водителя со скоростью:', driverCardWithSpeed);
+const driverCardWithSpeed = checkMaxSpeed(carInfo);
+console.log('Информация об автомобиле, его максимальной скорости и владельце:', driverCardWithSpeed);
 
 /*6. Написать функцию, которая получает первым аргументом  — объект, а вторым аргументом — свойство 
 объекта, которое нужно вывести и выводит его значение.*/
