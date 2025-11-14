@@ -57,7 +57,7 @@ const fixedAssets = [
   }
 ]
  
-const findedItems = fixedAssets.find(fixedAsset => fixedAsset.balanceCost > fixedAsset.amortization);
+const findedItems = fixedAssets.filter(fixedAsset => fixedAsset.balanceCost > fixedAsset.amortization);
 console.log('Упражнение 3:',findedItems);
 
 
