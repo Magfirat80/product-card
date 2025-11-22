@@ -34,7 +34,7 @@
   margin-right: 217px;
 }
 
-.product-cards {
+.product-cards-wrapper {
   display: block;
   position: relative;
   margin-left: 85px;
@@ -45,7 +45,7 @@
   height: 1191px;
 }
 
-.product-cards-field {
+.product-cards-list {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;

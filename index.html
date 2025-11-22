@@ -20,21 +20,17 @@
     <button id="change-own-color-button" class="homework-4-buttons">Кнопка, меняющая свой цвет</button>
   </div>
   
-  <div class="product-cards">
-    <ul id="card-list" class="product-cards-field">
+  <div class="product-cards-wrapper">
+    <ul id="card-list" class="product-cards-list">
     <template id="card-template">
       <li>
         <div class="card-container">
-          <img src="./images/moist-mousse.png" alt="Увлажняющий мусс" width="290" height="245">
+          <img id="product-image" src="./images/moist-mousse.png" alt="Увлажняющий мусс" width="290" height="245">
           <span class="product-category">для нормальной кожи</span>
           <h3 class="product-name">Увлажняющий мусс</h3>
           <p class="product-description">Глубоко увлажняют кожу лица, оставляя её мягкой и гладкой.</p>
           <span class="content">Состав:</span>
-          <ul class="product-compound">
-            <li id="product-compound-item-1" class="product-compound-item">активные натуральные комплексы</li>
-            <li id="product-compound-item-2" class="product-compound-item">витамины С, А, РР, В И Е</li>
-            <li id="product-compound-item-3" class="product-compound-item">солнцезащитные компоненты</li>
-          </ul>
+          <ul id="product-compound-list" class="product-compound"></ul>
           <div class="product-price-container">
             <span class="product-price-label">цена</span>
             <span class="product-price">2750 &#8381</span>
