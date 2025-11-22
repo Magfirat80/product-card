@@ -4,15 +4,13 @@ import { productCards } from "./cards.js";
 
 const cardTemplate = document.querySelector('#card-template');
 const cardList = document.querySelector('#card-list');
-const pathImage = './images/';
-const typeImage = '.png';
 
 function createCards(productCards, limit = 5) {
   productCards.slice(0, limit).forEach((card, index) => {
     const cardClone = cardTemplate.content.cloneNode(true);
 
     cardClone.querySelector('.product-category').textContent = card.category;
-    cardClone.querySelector('#product-image').src = `${pathImage}${card.image}${typeImage}`;
+    cardClone.querySelector('#product-image').src = `./images/${card.image}.png`;
     cardClone.querySelector('.product-name').textContent = card.name;
     cardClone.querySelector('.product-description').textContent = card.description;
     cardClone.querySelector('.content').textContent = 'Состав:';
@@ -71,7 +69,7 @@ function showCards() {
       alert('Пожалуйста, введите значение от 1 до 5!')
     }
   }
-  return createCards(productCards, count)
+  createCards(productCards, count)
 }
 
-console.log('Упражнение 6:', showCards())
+showCards()
