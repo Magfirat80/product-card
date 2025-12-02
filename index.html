@@ -10,6 +10,104 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
+  <form class="form-registration" id="form-registration">
+    <label>Ваше имя:
+      <input
+        type="text"
+        name="nameUser"
+        id="name-user"
+        placeholder="Иван"
+        required
+        autofocus
+      >
+    </label>
+    
+    <label>Фамилия:
+      <input
+        type="text"
+        name="surnameUser"
+        id="surname-user"
+        placeholder="Петров"
+        required
+      >
+    </label>
+
+    <label>Дата рождения:
+      <input
+        type="date"
+        name="dateOfBirth"
+        id="date-of-birth"
+        placeholder="28.11.2005"
+        required
+      >
+    </label>
+
+    <label>Логин:
+      <input
+        type="text"
+        name="login"
+        id="login"
+        placeholder="login"
+        required
+      >
+    </label>
+
+    <label>Пароль:
+      <input
+        type="password"
+        name="password"
+        id="password"
+        placeholder="ПаРо_л_ь"
+        required
+      >
+    </label>
+
+    <label>Повторите пароль:
+      <input
+        type="password"
+        name="passwordRepetition"
+        id="password-repetition"
+        placeholder="ПаРо_л_ь"
+        required
+      >
+    </label>
+    <input type="hidden" value="new Date">
+    
+    <button class="button-form-registration" type="submit">Зарегистрировать</button>
+    <button type="reset">Сбросить</button>
+  </form>
+  
+  <button class="button-authentification" id="button-authentification">Аутентификация</button>
+  
+  <div class="modal">
+    <div class="window-authentification">
+      <img class="close" src="./images/close.png" alt="Знак закрытия окна">
+      <span class="header-window-authentification">Вход в систему</span>
+      <form class="form-authentification" id="form-authentification">
+        <label class="label-login">Логин:
+          <input
+            type="text"
+            name="loginAuthentification"
+            id="login-authentification"
+            placeholder="login"
+            required
+            autofocus
+          >
+        </label>
+        <label class="label-password">Пароль:
+          <input
+            type="password"
+            name="passwordAuthentification"
+            id="password-authentification"
+            placeholder="ПаРо_л_ь"
+            required
+          >
+        </label>
+        <button class="button-form-authentification" type="submit">Войти</button>
+      </form>
+    </div>
+  </div>
+  
   <div class="flowers"></div>
   <div class="main-header">Выбери свой продукт</div>
   <div class="homework-4-buttons-container">
@@ -40,6 +138,47 @@
     </template>
     </ul>
   </div>
+
+  <footer class="footer">
+    
+    <div class="footer-up-line">
+      <div class="left-footer-up-line">
+        <p class="head-left-footer-up-line">Product Cards</p>
+        <p>У Нас Самые Лучшие Продукты Для Кожи!</p>
+        <p>
+          <img class="images-social" src="./images/vector_tg.svg" alt="значок телеграм">
+          <img class="images-social" src="./images/vector_vk.svg" alt="значок ВК">
+        </p>
+      </div>
+      
+      <div class="center-footer-up-line">
+        <p class="head-center-footer-up-line">Подпишись на наши акции:</p>
+        <form class="form-input" id="subscribe-form">
+          <input class="field-input" type="email" id="email" placeholder="Введи Email..." required>
+          <button class="button-form" type="submit">Подписаться</button>
+        </form>
+      </div>
+      
+      <div class="right-footer-up-line">
+        <p class="head-right-footer-up-line">Быстрые ссылки</p>
+        <nav>
+          <ul class="ul-navigation">
+            <li class="li-navigation"><a class="anchor-navigation" href="#">Главная</a></li>
+            <li class="li-navigation"><a class="anchor-navigation" href="#">Магазин</a></li>
+            <li class="li-navigation"><a class="anchor-navigation" href="#">Контакты</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <div class="footer-down-line">
+      <div class="up-footer-down-line"></div>
+      <div>www.product-cards.com©all right reserve</div>
+    </div>
+    
+  </footer>
+
   <script type="module" src="homework-8.js"></script>
+  <script src="homework-9.js"></script>
 </body>
 </html>

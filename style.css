@@ -4,9 +4,7 @@
   font-family: 'Montserrat', Courier, monospace;
   font-size: 13px;
   line-height: 18px;
-  color: #515076;
-  font-weight: 400;
-  box-sizing: border-box;
+  box-sizing: border-box
 }
 
 .flowers {
@@ -17,12 +15,12 @@
   margin-left: 85px;
   width: 790px;
   height: 697px;
-  top: 0px;
+  top: 0px
 }
 
 .main-header {
   font-weight: 400;
-  font-size: 70px;
+  font-size: 55px;
   line-height: 78px;
   text-align: center;
   vertical-align: middle;
@@ -31,7 +29,7 @@
   position: relative;
   margin-top: 220px;
   margin-left: 217px;
-  margin-right: 217px;
+  margin-right: 217px
 }
 
 .product-cards-wrapper {
@@ -42,7 +40,7 @@
   padding-top: 110px;
   margin-bottom: 116px;
   width: 1110px;
-  height: 1191px;
+  height: 1191px
 }
 
 .product-cards-list {
@@ -51,7 +49,7 @@
   flex-direction: row;
   justify-content: center;
   list-style: none;
-  gap: 45px 45px;
+  gap: 45px 45px
 }
 
 .card-container {
@@ -59,7 +57,7 @@
   height: 573px;
   padding: 25px;
   background-color: #F7F7FA;
-  box-shadow: 2px 2px 10px 0px #5150761A;
+  box-shadow: 2px 2px 10px 0px #5150761A
 }
 
 .product-category {
@@ -69,7 +67,7 @@
   color: #A5A3B9;
   margin-top: 30px;
   margin-bottom: 5px;
-  display: block;
+  display: block
 }
 
 .product-name {
@@ -77,40 +75,40 @@
   font-size: 20px;
   line-height: 27px;
   margin-top: 5px;
-  margin-bottom: 5px;
+  margin-bottom: 5px
 }
 
 .product-description {
-  margin-bottom: 15px;
+  margin-bottom: 15px
 }
 
 .product-compound {
   margin-top: 5px;
   list-style-type: circle;
-  margin-bottom: 25px;
+  margin-bottom: 25px
 }
 
 .product-compound-item {
-  margin-left: 14px;
+  margin-left: 14px
 }
 
 .product-price-container {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-between
 }
 
 .product-price-label {
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
-  text-transform: capitalize;
+  text-transform: capitalize
 }
 
 .product-price {
   font-weight: 400;
   font-size: 20px;
-  line-height: 24px;
+  line-height: 24px
 }
 
 .homework-4-buttons-container {
@@ -120,7 +118,7 @@
   z-index: 1;
   padding-top: 15px;
   margin-left: 85px;
-  width: 1110px;
+  width: 1110px
 }
 
 .homework-4-buttons {
@@ -128,9 +126,227 @@
   border-radius: 5px;
   height: 60px;
   width: 210px;
-  font-size: 12px;
+  font-size: 12px
 }
 
 .bg-aqua {
-  background-color: aqua;
+  background-color: aqua
+}
+
+.footer {
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  bottom: 0px;
+  background-color: #3A3A3A;
+  width: 1280px;
+  height: 360px
+}
+
+.footer-up-line {
+  width: 1080px;
+  height: 147px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 85px;
+  margin-left: 80px;
+  margin-right: 80px;
+  color: #FFFFFF
+}
+
+.left-footer-up-line {
+  width: 309px;
+  height: 147px;
+  left: 80px
+}
+
+.head-left-footer-up-line {
+  font-size: 28px;
+  font-weight: 800;
+  margin-bottom: 20px
+}
+
+.images-social {
+  margin-top: 50px;
+  margin-right: 20px
+}
+
+.center-footer-up-line {
+  width: 400px;
+  height: 147px
+}
+
+.head-center-footer-up-line {
+  font-size: 24px;
+  margin-bottom: 10px;
+  text-align: center
+}
+
+.form-input {
+  width: 400px;
+  height: 61px;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  align-content: center
+}
+
+.field-input {
+  border: none;
+  width: 230px;
+  margin-left: 40px;
+  color: #000000
+}
+
+.button-form {
+  color: #000000;
+  border: none;
+  border-left: solid 1px #000000;
+  padding-left: 13px;
+  cursor: pointer
+}
+
+.right-footer-up-line {
+  width: 178px;
+  height: 147px;
+  right: 80px
+}
+
+.head-right-footer-up-line {
+  font-size: 20px;
+  font-weight: 500px;
+  color: #FFFFFF
+}
+
+.ul-navigation {
+  list-style-type: none
+}
+
+.li-navigation {
+  margin-top: 15px
+}
+
+.anchor-navigation {
+  color: #FFFFFF;
+  text-decoration: none
+}
+
+.footer-down-line {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  bottom: 35px;
+  align-items: center;
+  width: 1280px;
+  justify-content: center;
+  color: #FFFFFF
+}
+
+.up-footer-down-line {
+  width: 66px;
+  justify-content: center;
+  border: 1px solid;
+  margin-bottom: 33px
+}
+
+.form-registration {
+  display: flex;
+  flex-direction: column;
+  margin-left: 50px;
+  margin-top: -200px;
+  gap: 10px;
+  width: 270px;
+  position: absolute;
+  z-index: 2;
+  background-color: rgb(135, 235, 162);
+  padding: 10px;
+  border-radius: 12px
+}
+
+.button-authentification {
+  position: absolute;
+  z-index: 2;
+  margin-left: 43%;
+  margin-top: -130px;
+  width: 300px;
+  height: 100px;
+  background-color: #e69292;
+  border-radius: 12px;
+  font-size: 25px;
+  font-weight: 600
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5)
+}
+
+.modal.showed {
+  display: block;
+}
+
+.window-authentification {
+  position: relative;
+  z-index: 3;
+  top: 50%;
+  margin-top: -190px;
+  left: 50%;
+  margin-left: -270px;
+  width: 540px;
+  height: 380px;
+  background-color: rgba(300, 300, 300);
+  border-radius: 12px
+}
+
+.close {
+  position: relative;
+  width: 25px;
+  height: 25px;
+  left: 100%;
+  margin-left: -30px;
+  top: 0%;
+  margin-top: 5px;
+  border: #A5A3B9
+}
+
+.form-authentification {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-left: 60px;
+  margin-top: 50px;
+  gap: 20px;
+  width: 420px;
+  height: 200px;
+  position: absolute;
+  z-index: 2;
+  background-color: rgb(135, 235, 162);
+  padding: 10px;
+  border-radius: 12px
+}
+
+.label-login, .label-password, #login-authentification, #password-authentification {
+  font-size: 20px
+}
+
+.header-window-authentification {
+  font-size: 40px;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px
+}
+
+.button-form-authentification {
+  width: 150px;
+  height: 40px;
+  margin-top: 10px;
+  border-radius: 12px
 }
