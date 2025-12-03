@@ -4,15 +4,14 @@ email должен соответствовать стандартам (доба
 "отправкой формы", при нажатии на которую мы будем выводить консоль лог 
 в виде объекта:  { email: 'введенная почта' } */
 
-const form = document.getElementById('subscribe-form');
-form.addEventListener('submit', handleFormSubmit);
+const formSubscription = document.getElementById('form-subscription');
+formSubscription.addEventListener('submit', handleFormSubmit);
 
 function handleFormSubmit(event) {
   event.preventDefault();
-  const input = document.getElementById('email');
-  const value = input.value;
-  const enteredMail = {email: value}
-  console.log(enteredMail)
+  const value = formSubscription.valueOfMail.value;
+  const enteredMail = {email: value};
+  console.log(enteredMail);
 }
 
 /* 5. Создать форму для регистрации. Она должна содержать поля: имя, 
@@ -28,25 +27,25 @@ function handleFormSubmit(event) {
 
 /* 6. Сохраняем этот объект в переменную для дальнейшего использования. */
 
-const emailForm = document.querySelector('#form-registration');
-const inputPassword = emailForm.password;
-const inputPasswordRepetition = emailForm.passwordRepetition;
+const formRegistration = document.querySelector('#form-registration');
+const inputPassword = formRegistration.password;
+const inputPasswordRepetition = formRegistration.passwordRepetition;
 let user = undefined;
-emailForm.addEventListener('submit', (event) => {
+formRegistration.addEventListener('submit', (event) => {
   event.preventDefault();
   if (inputPasswordRepetition.value !== inputPassword.value) {
     alert('Пароли не совпадают. Регистрация отклонена!!!');
     inputPasswordRepetition.focus();
     return
   } else {
-    alert('Регистрация принята!!!')
+    alert('Регистрация принята!!!');
   }
   const formFromEvent = event.target;
   const formData = new FormData(formFromEvent);
-  const dataForm = Object.fromEntries(formData.entries());
-  dataForm.createdOn = (new Date ().toString());
-  user = dataForm;
-  console.log('Данные регистрации:', dataForm)
+  const formValues = Object.fromEntries(formData.entries());
+  formValues.createdOn = new Date().toString();
+  user = formValues;
+  console.log('Данные регистрации:', formValues);
 })
 
 /* 7. Создать кнопку "Аутентификация", не стесняемся добавлять стили, практикуем css. */
@@ -62,8 +61,8 @@ emailForm.addEventListener('submit', (event) => {
 const modalDiv = document.querySelector('.modal');
 const buttonAuthentification = document.querySelector('#button-authentification');
 buttonAuthentification.addEventListener('click', () => {
-  const result = modalDiv.classList.toggle('showed')
-});
+  const result = modalDiv.classList.toggle('modal-showed');
+})
 
 /* 9. В открытой модалке у нас будет форма авторизации: логин, пароль, кнопка "Войти". Используя 
 объект с задания №6, проверяем, ввели ли мы правильные данные? Если да - то по нажатию на кнопку 
@@ -80,25 +79,25 @@ const formAuthentification = document.querySelector('#form-authentification');
 
 document.querySelector('.close').onclick = closeFormLogin;
 function closeFormLogin() {
-  modalDiv.classList.toggle('showed');
+  modalDiv.classList.toggle('modal-showed');
   formAuthentification.loginAuthentification.value = '';
-  formAuthentification.passwordAuthentification.value = ''
-}
+  formAuthentification.passwordAuthentification.value = '';
+};
 
 buttonFormLogin.addEventListener('click', (event) => {
   event.preventDefault();
   const formAuthentificationData = new FormData(formAuthentification);
   const dataFormAuthentification = Object.fromEntries(formAuthentificationData.entries());
-  console.log('Данные аутентификации:', dataFormAuthentification)
+  console.log('Данные аутентификации:', dataFormAuthentification);
   if (dataFormAuthentification.loginAuthentification !== user.login || dataFormAuthentification.passwordAuthentification !== user.password) {
-    alert('Логин и/или пароль введены не верно. Доступ закрыт!!!')
+    alert('Логин и/или пароль введены не верно. Доступ закрыт!!!');
   } else {
     alert('Доступ открыт!!!');
-    modalDiv.classList.toggle('showed');
+    modalDiv.classList.toggle('modal-showed');
     formAuthentification.loginAuthentification.value = '';
     formAuthentification.passwordAuthentification.value = '';
     currentUser = user;
-    currentUser.lastLogin = (new Date ().toString());
-    console.log('Проверка: currentUser = ', currentUser)
+    currentUser.lastLogin = new Date ().toString();
+    console.log('Проверка: currentUser = ', currentUser);
   }
 })
