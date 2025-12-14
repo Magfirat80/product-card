@@ -1,6 +1,5 @@
 import {comments} from "./comments.js"
 
-
 /* 2. Создать массив чисел от 1 до 10. Отфильтровать его таким образом, что бы мы получил 
 массив чисел, начиная с 5. */
 
@@ -58,7 +57,7 @@ const fixedAssets = [
 ]
  
 const findedItems = fixedAssets.filter(fixedAsset => fixedAsset.balanceCost > fixedAsset.amortization);
-console.log('Упражнение 3:',findedItems);
+// console.log('Упражнение 3:',findedItems);
 
 
 /* 4. Написать функцию, которая аргументом будет принимать массив и изменять его порядок на 
@@ -69,10 +68,10 @@ function reverseArray(array) {
 };
 
 reverseArray(numbers);
-console.log('Упражнение 4_1:', numbers);
+// console.log('Упражнение 4_1:', numbers);
 
 reverseArray(fixedAssets);
-console.log('Упражнение 4_2:', fixedAssets);
+// console.log('Упражнение 4_2:', fixedAssets);
 
 
 /* 5. Добавить файл comments.js, в нём создать константу и в него поместить первые 10 объектов 
@@ -85,33 +84,33 @@ console.log('Упражнение 4_2:', fixedAssets);
  мы сможем внедрить переменную из comments.js в homework-7.js и работать с ней. Когда мы введем 
  название переменной, нам предложит импортировать ее - так и делаем. */
 
-console.log('Упражнение 6:', comments)
+// console.log('Упражнение 6:', comments)
 
 
 /* 7. Вывести в консоль массив тех комментариев, почта пользователей которых содержит ".com"*/
 
 const arrayWithMailCom = comments.filter(comment => comment.email.includes('.com'));
-console.log('Упражнение 7:', arrayWithMailCom);
+// console.log('Упражнение 7:', arrayWithMailCom);
 
 
 /* 8. Перебрать массив таким образом, что бы пользователи с id меньше или равно 5 имели
  postId: 2, а те, у кого id больше 5, имели postId: 1 */
 
 const arrayIdPostId = comments.map(comment => ({...comment, postId: comment.id <=5 ? 2 : 1}))
-console.log('Упражнение 8:', arrayIdPostId)
+// console.log('Упражнение 8:', arrayIdPostId)
 
 
 /* 9. Перебрать массив, что бы объекты состояли только из айди и имени */
 
 const arrayIdName = comments.map(comment => ({id: comment.id, name: comment.name}))
-console.log('Упражнение 9:', arrayIdName)
+// console.log('Упражнение 9:', arrayIdName)
 
 
 /* 10. Перебираем массив, добавляем объектам свойство isInvalid и проверяем: если длина тела 
 сообщения (body) больше 180 символов - устанавливаем true, меньше - false. */
 
 const arrayWithPropertyLengthBody = comments.map(comment => ({...comment, isInvalid: comment.body.length > 180}));
-console.log('Упражнение 10:', arrayWithPropertyLengthBody)
+// console.log('Упражнение 10:', arrayWithPropertyLengthBody)
 
 
 /* 11. Почитать про метод массива reduce. Используя его, вывести массив почт и провернуть тоже 
@@ -121,14 +120,14 @@ const arrMail = comments.reduce((acc, comment) => {
   acc.push(comment.email);
   return acc;
 }, []);
-console.log('Упражнение 11_1:', arrMail);
+// console.log('Упражнение 11_1:', arrMail);
 
 const arrMailMap = comments.map(comment => comment.email)
-console.log('Упражнение 11_2:', arrMailMap);
+// console.log('Упражнение 11_2:', arrMailMap);
 
 
 /* 12. Почитать про методы toString(), join() и перебрав массив с задания №11, привести его к 
 строке. */
 
-console.log('Упражнение 12_1:', arrMail.toString());
-console.log('Упражнение 12_2:', arrMailMap.join())
+// console.log('Упражнение 12_1:', arrMail.toString());
+// console.log('Упражнение 12_2:', arrMailMap.join())

@@ -13,7 +13,7 @@ const userInfo = {
   city: 'Астрахань'
 }
 
-console.log('Информация о пользователе:', userInfo);
+// console.log('Информация о пользователе:', userInfo);
 
 /*4. Создайте объект, который будет хранить данные об автомобиле (марка, модель, год выпуска, цвет, вид коробки). 
 Добавьте дополнительное свойство - владелец авто, значением которого будет объект, описанный в пункте №3. 
@@ -28,7 +28,7 @@ const carInfo = {
 }
 
 carInfo.owner = userInfo;
-console.log('Информация об автомобиле и его владельце:', carInfo);
+// console.log('Информация об автомобиле и его владельце:', carInfo);
 
 /*5. Написать функцию которая аргументом будет принимать объект, описанный в пункте №4. Она проверяет, есть ли 
 в объекте свойство "максимальная скорость", если нет - добавляет его и задает значение, если есть - 
@@ -43,8 +43,8 @@ function checkMaxSpeed(carInfo) {
   }
 }
 
-const driverCardWithSpeed = checkMaxSpeed(carInfo);
-console.log('Информация об автомобиле, его максимальной скорости и владельце:', driverCardWithSpeed);
+const infoDriverCardWithSpeed = checkMaxSpeed(carInfo);
+// console.log('Информация об автомобиле, его максимальной скорости и владельце:', infoDriverCardWithSpeed);
 
 /*6. Написать функцию, которая получает первым аргументом  — объект, а вторым аргументом — свойство 
 объекта, которое нужно вывести и выводит его значение.*/
@@ -66,7 +66,7 @@ showInfoAboutStudent(studentInfo);
 
 /*7. Создать массив, который содержит названия продуктов (просто строки)*/
 const products = ['хлеб', 'макароны', 'мука', 'сахар', 'соль', 'картофель'];
-console.log('Названия продуктов:', products);
+// console.log('Названия продуктов:', products);
 
 /*8. Создать массив, состоящий из объектов, где объект представляет собой книгу (название, автор, год выпуска, 
 цвет обложки, жанр) (3-5 книг). После, используя известный нам метод массив, добавить еще одну книгу в конец 
@@ -152,7 +152,7 @@ const domesticBooks = [
 ]
 
 const worldBooks = [...foreignBooks, ...domesticBooks];
-console.log('Мировая литература:', worldBooks)
+// console.log('Мировая литература:', worldBooks)
 
 /*10. Почитать про метод массива — forEach. Написать функцию, которая принимает массив сущностей с задания №9. 
 Добавляем новое свойство для объекта "isRare (это редкий)" и в зависимости от года выпуска книги
@@ -161,7 +161,7 @@ console.log('Мировая литература:', worldBooks)
 
  //  isAfterWar - признак выпуска книги после ВОВ
 
-worldBooks2 = structuredClone(worldBooks);
+const worldBooks2 = structuredClone(worldBooks);
 
 worldBooks2.forEach(book => {
   if (book.firstPublished > 1945) {
@@ -169,5 +169,6 @@ worldBooks2.forEach(book => {
   } else {
     book.isAfterWar = false
   }
-  console.log(book)
 })
+
+// console.log(worldBooks2)
