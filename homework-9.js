@@ -8,11 +8,11 @@ import { Form } from "./Form.js";
 import { Modal } from "./Modal.js";
 
 const formSubscription = new Form('form-subscription');
-formSubscription.idForm.addEventListener('submit', handleFormSubmit);
+formSubscription.form.addEventListener('submit', handleFormSubmit);
 
 function handleFormSubmit(event) {
   event.preventDefault();
-  const value = formSubscription.getAllValuesForm();
+  const value = formSubscription.getFormValues();
   const enteredMail = {email: value.valueOfMail};
   console.log(enteredMail);
 }
@@ -31,12 +31,12 @@ function handleFormSubmit(event) {
 /* 6. Сохраняем этот объект в переменную для дальнейшего использования. */
 
 const formRegistration = new Form('form-registration');
-const inputPassword = formRegistration.idForm.password;
-const inputPasswordRepetition = formRegistration.idForm.passwordRepetition;
+const inputPassword = formRegistration.form.password;
+const inputPasswordRepetition = formRegistration.form.passwordRepetition;
 let user = undefined;
-formRegistration.idForm.addEventListener('submit', (event) => {
+formRegistration.form.addEventListener('submit', (event) => {
   event.preventDefault();
-  if (!formRegistration.checkFormValidity()) {
+  if (!formRegistration.isValid()) {
     alert('Форма не валидна!');
     return;
   }
@@ -49,14 +49,14 @@ formRegistration.idForm.addEventListener('submit', (event) => {
     alert('Регистрация принята!!!');
   }
 
-  const formValues = formRegistration.getAllValuesForm();
+  const formValues = formRegistration.getFormValues();
   formValues.createdOn = new Date().toString();
   user = formValues;
   console.log('Данные регистрации:', formValues);
 })
 
-formRegistration.idForm.addEventListener('reset', (event) => {
-  formRegistration.clearAllValuesForm();
+formRegistration.form.addEventListener('reset', (event) => {
+  formRegistration.resetForm();
 })
 
 /* 7. Создать кнопку "Аутентификация", не стесняемся добавлять стили, практикуем css. */
@@ -69,10 +69,10 @@ formRegistration.idForm.addEventListener('reset', (event) => {
 будет затемнять всю страницу)
 2) Модальное окно находиться ровно по центру страницы, независимо от масштаба */
 
-const modalDiv = new Modal('modal');
+const authenticationModal = new Modal('authentication-modal');
 const buttonAuthentification = document.querySelector('#button-authentification');
 buttonAuthentification.addEventListener('click', () => {
-  modalDiv.openModal();
+  authenticationModal.openModal();
 })
 
 /* 9. В открытой модалке у нас будет форма авторизации: логин, пароль, кнопка "Войти". Используя 
@@ -89,20 +89,20 @@ const buttonFormLogin = document.querySelector('.button-form-authentification');
 const formAuthentification = new Form('form-authentification');
 document.querySelector('.close').addEventListener('click', closeFormLogin)
 function closeFormLogin() {
-  modalDiv.closeModal();
-  formAuthentification.clearAllValuesForm();
+  authenticationModal.closeModal();
+  formAuthentification.resetForm();
 };
 
 buttonFormLogin.addEventListener('click', (event) => {
   event.preventDefault();
-  const dataFormAuthentification = formAuthentification.getAllValuesForm();
+  const dataFormAuthentification = formAuthentification.getFormValues();
   console.log('Данные аутентификации:', dataFormAuthentification);
   if (dataFormAuthentification.loginAuthentification !== user.login || dataFormAuthentification.passwordAuthentification !== user.password) {
     alert('Логин и/или пароль введены не верно. Доступ закрыт!!!');
   } else {
     alert('Доступ открыт!!!');
-    modalDiv.closeModal();
-    formAuthentification.clearAllValuesForm();
+    authenticationModal.closeModal();
+    formAuthentification.resetForm();
     currentUser = user;
     currentUser.lastLogin = new Date ().toString();
     console.log('Проверка: currentUser = ', currentUser);

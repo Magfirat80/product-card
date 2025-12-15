@@ -8,22 +8,19 @@
   Используя внутренние методы - мы можем управлять через айди модалки ее закрытием, открытием. */
 
 export class Modal {
-  constructor(idModal) {
-    this.idModal = document.getElementById(idModal);
+  constructor(modalId) {
+    this.modal = document.getElementById(modalId);
   }
   
   openModal() {
-    this.idModal.classList.add('modal-showed');
+    this.modal.classList.add('modal-showed');
   }
+
   closeModal() {
-    this.idModal.classList.remove('modal-showed');
+    this.modal.classList.remove('modal-showed');
   }
   
-  checkIsOpen() {
-    if(!this.idModal.classList.contains('modal-showed')) {
-      alert('Окно открыто!');
-    } else {
-      alert('Окно закрыто!');
-    }
+  isOpen() {
+    return this.modal.classList.contains('modal-showed');
   }
 }

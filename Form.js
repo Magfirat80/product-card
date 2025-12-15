@@ -7,29 +7,22 @@
 Используя внутренние методы - мы можем управлять через айди формы получением значений и всем, что должна делать модалка. */
 
 export class Form {
-  constructor(idForm) {
-    this.idForm = document.getElementById(idForm);
+  constructor(formId) {
+    this.form = document.getElementById(formId);
   }
 
-  getAllValuesForm() {
-    const formData = new FormData(this.idForm);
+  getFormValues() {
+    const formData = new FormData(this.form);
     const formValues = Object.fromEntries(formData.entries());
     return formValues;
   }
 
-  checkFormValidity() {
-    const values = this.getAllValuesForm();
-    for(const key in values) {
-      if(values[key].trim === '') {
-        return false
-      }
-    }
-    return true
+  isValid() {
+    return this.form.checkValidity();
   }
 
-  clearAllValuesForm() {
-    this.idForm.reset();
+  resetForm() {
+    this.form.reset();
   }
-
 }
 

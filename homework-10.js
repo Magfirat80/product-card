@@ -23,7 +23,7 @@ class FoodProduct extends Product {
 
 const driedApricots = new FoodProduct('Курага', 'Fresh Bazar', '231ккал');
 
-class bookProduct extends Product {
+class BookProduct extends Product {
   constructor(category, brand, numberOfPages) {
     super(category, brand);
     this.numberOfPages = numberOfPages;
@@ -33,7 +33,7 @@ class bookProduct extends Product {
   }
 }
 
-const theMurderInTheRueMorgue = new bookProduct('Убийство на улице Морг', 'Эдгар Аллан По', '224');
+const theMurderInTheRueMorgue = new BookProduct('Убийство на улице Морг', 'Эдгар Аллан По', '224');
 
 class ElectricalProduct extends Product {
   constructor(category, brand, power) {
