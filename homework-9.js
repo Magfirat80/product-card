@@ -7,12 +7,12 @@ email должен соответствовать стандартам (доба
 import { Form } from "./Form.js";
 import { Modal } from "./Modal.js";
 
-const formSubscription = new Form('form-subscription');
-formSubscription.form.addEventListener('submit', handleFormSubmit);
+const emailForm = new Form('email-form');
+emailForm.form.addEventListener('submit', handleFormSubmit);
 
 function handleFormSubmit(event) {
   event.preventDefault();
-  const value = formSubscription.getFormValues();
+  const value = emailForm.getFormValues();
   const enteredMail = {email: value.valueOfMail};
   console.log(enteredMail);
 }
