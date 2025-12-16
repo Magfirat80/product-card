@@ -2,15 +2,15 @@ import { productCards } from "./cards.js";
 
 /* 3. По аналогии из лекции — создать и реализовать шаблон для продуктовых карточек. */
 
-const cardTemplate = document.querySelector('#card-template');
 const cardList = document.querySelector('#card-list');
+const cardTemplate = document.querySelector('#card-template');
 
 function createCards(productCards, limit = 5) {
-  productCards.slice(0, limit).forEach((card, index) => {
+  productCards.slice(0, limit).forEach(card => {
     const cardClone = cardTemplate.content.cloneNode(true);
 
-    cardClone.querySelector('.product-category').textContent = card.category;
     cardClone.querySelector('#product-image').src = `./images/${card.image}.png`;
+    cardClone.querySelector('.product-category').textContent = card.category;
     cardClone.querySelector('.product-name').textContent = card.name;
     cardClone.querySelector('.product-description').textContent = card.description;
     cardClone.querySelector('.content').textContent = 'Состав:';
@@ -20,23 +20,21 @@ function createCards(productCards, limit = 5) {
     card.compound.forEach(element => {
       const li = document.createElement('li');
       li.textContent = element;
-      compoundList.appendChild(li)
+      compoundList.appendChild(li);
     });
     
     cardClone.querySelector('.product-price-label').textContent = 'цена';
     cardClone.querySelector('.product-price').textContent = card.price + '\u20BD';
-    cardList.appendChild(cardClone)  
+    cardList.appendChild(cardClone);
   })
 }
-
-// createCards(cards);
 
 /* 4. Используя метод .reduce(), получить строку, которая состоит из названий продуктовых карточек, разделенных 
 точкой с запятой */
 
 const namesProduct = productCards.reduce((acc, card) => {
   acc.push(card.name);
-  return acc
+  return acc;
 }, [])
 
 console.log('Упражнение 4:', namesProduct.join(';'))
@@ -47,10 +45,8 @@ console.log('Упражнение 4:', namesProduct.join(';'))
 
 const objectsNameKeyValueDescription = productCards.reduce((acc, card) => {
   acc[card.name] = card.description;
-  return acc
+  return acc;
 }, [])
-
-console.log('Упражнение 5:', objectsNameKeyValueDescription);
 
 
 /* 6*. Реализовать функцию, которая при старте нашей страницы выводит сообщение с текстом, мол "Сколько карточек 
@@ -66,10 +62,10 @@ function showCards() {
     if (!isNaN(count) && count >= 1 && count <= 5 && Number.isInteger(count)) {
       isValid = true;
     } else {
-      alert('Пожалуйста, введите значение от 1 до 5!')
+      alert('Пожалуйста, введите значение от 1 до 5!');
     }
   }
-  createCards(productCards, count)
+  createCards(productCards, count);
 }
 
 showCards()
