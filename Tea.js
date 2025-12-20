@@ -23,8 +23,3 @@ export class Tea extends Drink {
 
 const teaNuriBlack = new Tea('Чай принцесса Нури', 0.3, 30, 30, 'черный');
 const teaNuriGreen = new Tea('Чай принцесса Нури', 0.3, 30, 30, 'зеленый');
-
-// teaNuriBlack.showInfo();
-// console.log(teaNuriBlack.getTemperature());
-// teaNuriBlack.setTemperature(95);
-// teaNuriBlack.serveDrink();

@@ -29,7 +29,7 @@ export class Drink {
   }
 
   getInfo() {
-    return [this.name, this.volume, this.price, this.#temperature].toString();
+    return `${this.name}, ${this.volume}, ${this.price}, ${this.#temperature}`;
   }
 
   getTemperature() {

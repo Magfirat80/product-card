@@ -23,6 +23,3 @@ export class Lemonade extends Drink {
 
 const limoDuchess = new Lemonade('Лимонад', 0.5, 50, 35, 'дюшес');
 const limoTarragon = new Lemonade('Лимонад', 0.5, 50, 35, 'тархун');
-// limoDuchess.showInfo();
-// limoDuchess.setTemperature(3);
-// limoDuchess.serveDrink();
