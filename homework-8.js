@@ -35,10 +35,9 @@ function createCards(productCards, limit = 5) {
 const namesProduct = productCards.reduce((acc, card) => {
   acc.push(card.name);
   return acc;
-}, [])
+}, []);
 
-console.log('Упражнение 4:', namesProduct.join(';'))
-
+console.log('Упражнение 4:', namesProduct.join(';'));
 
 /* 5. Используя метод .reduce(), получить массив объектов, где ключем является название продукта, а значением 
 - его описание */
@@ -46,8 +45,7 @@ console.log('Упражнение 4:', namesProduct.join(';'))
 const objectsNameKeyValueDescription = productCards.reduce((acc, card) => {
   acc[card.name] = card.description;
   return acc;
-}, [])
-
+}, []);
 
 /* 6*. Реализовать функцию, которая при старте нашей страницы выводит сообщение с текстом, мол "Сколько карточек 
 отобразить? От 1 до 5" и в зависимости от результата - будет выводить это количество. Должна быть защита 
@@ -68,4 +66,4 @@ function showCards() {
   createCards(productCards, count);
 }
 
-showCards()
+showCards();
