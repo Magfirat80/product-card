@@ -5,7 +5,7 @@ import {comments} from "./comments.js"
 
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 const filteredNumbers = numbers.filter(number => number >= 5);
-console.log('Упражнение 2:', filteredNumbers)
+console.log('Упражнение 2:', filteredNumbers);
 
 
 /* 3. Создать массив строк, относящихся к любой сущности (название фильмов/книг, кухонные приборы,
@@ -55,21 +55,19 @@ const fixedAssets = [
     amortization: 27057
   }
 ]
- 
-const findedItems = fixedAssets.filter(fixedAsset => fixedAsset.balanceCost > fixedAsset.amortization);
 
+const findedItems = fixedAssets.filter(fixedAsset => fixedAsset.balanceCost > fixedAsset.amortization);
 
 /* 4. Написать функцию, которая аргументом будет принимать массив и изменять его порядок на 
 противоположный ("переворачивать"). Два вышеуказанных массива с помощью этой функции перевернуть. */
 
 function reverseArray(array) {
-  return array.reverse()
-};
+  return array.reverse();
+}
 
 reverseArray(numbers);
 
 reverseArray(fixedAssets);
-
 
 /* 5. Добавить файл comments.js, в нём создать константу и в него поместить первые 10 объектов 
 этого массива (https://jsonplaceholder.typicode.com/comments). Данный массив представляет собой 
@@ -81,28 +79,23 @@ reverseArray(fixedAssets);
  мы сможем внедрить переменную из comments.js в homework-7.js и работать с ней. Когда мы введем 
  название переменной, нам предложит импортировать ее - так и делаем. */
 
-
 /* 7. Вывести в консоль массив тех комментариев, почта пользователей которых содержит ".com"*/
 
 const arrayWithMailCom = comments.filter(comment => comment.email.includes('.com'));
 
-
 /* 8. Перебрать массив таким образом, что бы пользователи с id меньше или равно 5 имели
  postId: 2, а те, у кого id больше 5, имели postId: 1 */
 
-const arrayIdPostId = comments.map(comment => ({...comment, postId: comment.id <=5 ? 2 : 1}))
-
+const arrayIdPostId = comments.map(comment => ({...comment, postId: comment.id <=5 ? 2 : 1}));
 
 /* 9. Перебрать массив, что бы объекты состояли только из айди и имени */
 
-const arrayIdName = comments.map(comment => ({id: comment.id, name: comment.name}))
-
+const arrayIdName = comments.map(comment => ({id: comment.id, name: comment.name}));
 
 /* 10. Перебираем массив, добавляем объектам свойство isInvalid и проверяем: если длина тела 
 сообщения (body) больше 180 символов - устанавливаем true, меньше - false. */
 
 const arrayWithPropertyLengthBody = comments.map(comment => ({...comment, isInvalid: comment.body.length > 180}));
-
 
 /* 11. Почитать про метод массива reduce. Используя его, вывести массив почт и провернуть тоже 
 самое с помощью метода map */
@@ -112,8 +105,7 @@ const arrMail = comments.reduce((acc, comment) => {
   return acc;
 }, []);
 
-const arrMailMap = comments.map(comment => comment.email)
-
+const arrMailMap = comments.map(comment => comment.email);
 
 /* 12. Почитать про методы toString(), join() и перебрав массив с задания №11, привести его к 
 строке. */

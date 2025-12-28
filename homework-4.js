@@ -14,7 +14,7 @@ const changeColorAllCardsButton = document.querySelector('#change-color-all-card
 const teaColor = '#802505';
 
 changeColorAllCardsButton.addEventListener('click', () => {
-  allProductCards.forEach((card) => {card.style.backgroundColor = teaColor
+  allProductCards.forEach((card) => {card.style.backgroundColor = teaColor;
   })
 })
 
@@ -24,9 +24,9 @@ const openGoogleButton = document.querySelector('#open-google-button');
 openGoogleButton.addEventListener('click', openGoogle)
 
 function openGoogle() {
-  const answer = confirm('Вы действительно хотите открыть Google?')
+  const answer = confirm('Вы действительно хотите открыть Google?');
   if (answer === true) {
-    window.open('https://google.com')
+    window.open('https://google.com');
   } else {
     return;
   }
@@ -38,15 +38,15 @@ const alertAndMessageToConsoleButton = document.querySelector('#alert-and-messag
 alertAndMessageToConsoleButton.addEventListener('click', () => outputAlertAndMessageToConsole('ДЗ №4'))
 
 function outputAlertAndMessageToConsole(message) {
-  alert(message)
-  console.log(message)
+  alert(message);
+  console.log(message);
 }
 
 // Кнопка, меняющая свои цвета
 const changeOwnColorButton = document.querySelector('#change-own-color-button');
 
 changeOwnColorButton.addEventListener('click', () => {
-  changeOwnColorButton.classList.toggle('bg-aqua')
+  changeOwnColorButton.classList.toggle('bg-aqua');
 })
 
 // При наведении на главный заголовок ("Выбери свой продукт") - он выводится в консоль.
@@ -55,5 +55,5 @@ const mainHeader = document.querySelector('.main-header');
 mainHeader.addEventListener('mouseover', outputToConsole);
 
 function outputToConsole() {
-  console.log(mainHeader.textContent)
+  console.log(mainHeader.textContent);
 }

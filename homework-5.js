@@ -3,7 +3,7 @@
 "Сейчас в X температура  — Y градусов по Цельсию" */
 
 function showCityTemperature(city, temperature) {
-  console.log(`Сейчас в городе ${city} температура - ${temperature} градусов по Цельсию`)
+  console.log(`Сейчас в городе ${city} температура - ${temperature} градусов по Цельсию`);
 }
 
 showCityTemperature('Дубай', 30);
@@ -18,9 +18,9 @@ const SPEED_SOUND = 343;
 
 function checkSpeed(currentSpeed) {
   if (currentSpeed > SPEED_SOUND) {
-    console.log('Сверхзвуковая скорость')
+    console.log('Сверхзвуковая скорость');
   } else {
-    console.log('Дозвуковая скорость')
+    console.log('Дозвуковая скорость');
   }
 }
 
@@ -38,9 +38,9 @@ const priceProduct = 45;
 
 function buyProduct(budget) {
   if (budget >= priceProduct) {
-    console.log(`${nameProduct} прибретен. Спасибо за покупку!`)
+    console.log(`${nameProduct} прибретен. Спасибо за покупку!`);
   } else {
-    console.log(`Вам не хватает ${priceProduct - budget}, пополните баланс`)
+    console.log(`Вам не хватает ${priceProduct - budget}, пополните баланс`);
   }
 }
 
@@ -48,13 +48,13 @@ buyProduct(50);
 
 /* 6. Создать 1 функцию и именовать её по своему усмотрению */
 
-const currentLogin = 'AdminITSim'
-const currenPassword = 'JSTSAng'
+const currentLogin = 'AdminITSim';
+const currenPassword = 'JSTSAng';
 function checkAccess(login, password) {
   if (login === currentLogin && password === currenPassword) {
-    console.log('Access is allowed!')
+    console.log('Access is allowed!');
   } else {
-    console.log('Access is denied!')
+    console.log('Access is denied!');
   }
 }
 

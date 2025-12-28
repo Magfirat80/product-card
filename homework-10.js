@@ -6,6 +6,7 @@ class Product {
     this.category = category;
     this.brand = brand;
   }
+
   showInfoProduct() {
     console.log(`${this.category}. Изготовитель: ${this.brand}`);
   }
@@ -16,6 +17,7 @@ class FoodProduct extends Product {
     super(category, brand);
     this.nutritionalValue = nutritionalValue;
   }
+
   showInfoProduct() {
     console.log(`${this.category}. Изготовитель: ${this.brand}. Пищевая ценность: ${this.nutritionalValue}`);
   }
@@ -28,6 +30,7 @@ class BookProduct extends Product {
     super(category, brand);
     this.numberOfPages = numberOfPages;
   }
+
   showInfoProduct() {
     console.log(`${this.category}. Издатель: ${this.brand}. Количество страниц: ${this.numberOfPages}`);
   }
@@ -40,18 +43,20 @@ class ElectricalProduct extends Product {
     super(category, brand);
     this.power = power;
   }
+
   showInfoProduct() {
     console.log(`${this.category}. Изготовитель: ${this.brand}. Мощность: ${this.power}`);
   }
 }
 
-const teapot = new ElectricalProduct('Чайник', 'Weissgauff', '1500Вт')
+const teapot = new ElectricalProduct('Чайник', 'Weissgauff', '1500Вт');
 
 class LightingProduct extends ElectricalProduct {
   constructor(category, brand, power, luminousFlux) {
     super(category, brand, power);
     this.luminousFlux = luminousFlux;
   }
+  
   showInfoProduct() {
     console.log(`${this.category}. Изготовитель: ${this.brand}. Мощность: ${this.power}. Световой поток: ${this.luminousFlux}`);
   }

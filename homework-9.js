@@ -44,7 +44,7 @@ formRegistration.form.addEventListener('submit', (event) => {
   if (inputPasswordRepetition.value !== inputPassword.value) {
     alert('Пароли не совпадают. Регистрация отклонена!!!');
     inputPasswordRepetition.focus();
-    return
+    return;
   } else {
     alert('Регистрация принята!!!');
   }
@@ -87,11 +87,11 @@ buttonAuthentification.addEventListener('click', () => {
 let currentUser = undefined;
 const buttonFormLogin = document.querySelector('.button-form-authentification');
 const formAuthentification = new Form('form-authentification');
-document.querySelector('.close').addEventListener('click', closeFormLogin)
+document.querySelector('.close').addEventListener('click', closeFormLogin);
 function closeFormLogin() {
   authenticationModal.closeModal();
   formAuthentification.resetForm();
-};
+}
 
 buttonFormLogin.addEventListener('click', (event) => {
   event.preventDefault();
