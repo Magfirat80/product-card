@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Async_13_DZ</title>
+  <link rel="stylesheet" href="./async.css">
+</head>
+<body>
+  <div class="status-bar"></div>
+  <div class="user-cards-wrapper">
+    <div class="buttons-panel">
+      <button class="show-all-cards-button" id="show-all-cards-button">Показать все карточки</button>
+      <button class="delete-all-cards-button" id="delete-all-cards-button">Удалить все карточки</button>
+    </div>
+    <ul id="card-list" class="user-cards-list">
+    <template id="card-template">
+      <li>
+        <div class="card-container">
+          <div class="user-name-field">
+            <span class="user-name-label">Имя:</span>
+            <span class="user-name"></span>
+          </div>
+          <div class="user-surname-field">
+            <span class="user-surname-label">Фамилия:</span>
+            <span class="user-surname"></span>
+          </div>
+          <div class="user-email-field">
+            <span class="user-email-label">Почта:</span>
+            <span class="user-email"></span>
+          </div>
+          <div class="user-age-field">
+            <span class="user-age-label">Возраст:</span>
+            <span class="user-age"></span>
+          </div>
+          <div class="user-country-field">
+            <span class="user-country-label">Страна:</span>
+            <span class="user-country"></span>
+          </div>
+          <div class="user-city-field">
+            <span class="user-city-label">Город:</span>
+            <span class="user-city"></span>
+          </div> 
+        </div>
+        <button class="delete-card-button">Удалить карточку</button>
+      </li>
+    </template>
+    </ul>
+
+  </div>
+
+  <script src="./async.js"></script>
+</body>
+</html>

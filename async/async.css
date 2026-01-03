@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.user-cards-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  list-style: none;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  height: 350px;
+  font-size: 20px;
+  margin: 8px;
+  padding: 8px;
+  border-style: solid;
+  border-radius: 15px;
+  background-color: #84f0ac;
+}
+
+.user-name-field, .user-surname-field, .user-email-field, .user-age-field, .user-country-field, .user-city-field {
+  height: 25px;
+  border: solid 1px;
+  margin-bottom: 5px;
+  padding: 5px;
+  padding-left: 15px;
+  border-radius: 5px;
+  position: relative;
+  background-color: #d7e7bc;
+}
+
+.user-name, .user-surname, .user-email, .user-age, .user-country, .user-city {
+  position: absolute;
+  left: 110px;
+} 
+
+.delete-card-button {
+  position: relative;
+  width: 120px;
+  height: 60px;
+  top: -20%;
+  left: 19%;
+  transform: translate(50%, -20%);
+  border-radius: 10px;
+  font-size: 15px;
+}
+
+.buttons-panel {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.show-all-cards-button, .delete-all-cards-button {
+  width: 190px;
+  height: 60px;
+  border-radius: 10px;
+  font-size: 15px;
+}
+
+.status-bar {
+  margin-left: 770px;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.status-bar.info {
+  background: #e7f3ff;
+  color: #084298;
+}
+
+.status-bar.success {
+  background: #d1e7dd;
+  color: #0f5132;
+}
+
+.status-bar.error {
+  background: #f8d7da;
+  color: #842029;
+}
