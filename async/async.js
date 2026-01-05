@@ -37,22 +37,12 @@ function createCards(arrayOfUsers, limit = arrayOfUsers.length) {
   cardList.innerHTML = '';
   arrayOfUsers.slice(0, limit).forEach(user => {
     const cardClone = cardTemplate.content.cloneNode(true);
-    cardClone.querySelector('.user-name-label').textContent = 'Имя:';
+
     cardClone.querySelector('.user-name').textContent = user.name;
-    
-    cardClone.querySelector('.user-surname-label').textContent = 'Фамилия:';
     cardClone.querySelector('.user-surname').textContent = user.surname;
-
-    cardClone.querySelector('.user-email-label').textContent = 'Почта:';
     cardClone.querySelector('.user-email').textContent = user.email;
-
-    cardClone.querySelector('.user-age-label').textContent = 'Возраст:';
     cardClone.querySelector('.user-age').textContent = user.age;
-
-    cardClone.querySelector('.user-country-label').textContent = 'Страна:';
     cardClone.querySelector('.user-country').textContent = user.country;
-
-    cardClone.querySelector('.user-city-label').textContent = 'Город:';
     cardClone.querySelector('.user-city').textContent = user.city;
 
     const deleteCardButton = cardClone.querySelector('.delete-card-button');
@@ -113,7 +103,7 @@ function showDataProcessingStatus(message, type = 'info') {
   statusBar.className = `status-bar ${type}`;
 }
 
-const start = () => {
+const initUsersCardsApp = () => {
   const usersData = localStorage.getItem('users');
   if (!usersData) {
     showDataProcessingStatus('Загрузка данных...', 'info');
@@ -138,4 +128,4 @@ const start = () => {
   }
 }
 
-start();
+initUsersCardsApp();
