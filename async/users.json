@@ -1,0 +1,58 @@
+{
+  "users": [
+    {
+      "id": "01",
+      "name": "Mike",
+      "surname": "Geremis",
+      "email": "Geremis@google.com",
+      "age": 35,
+      "country": "USA",
+      "city": "New York"
+    },
+     {
+      "id": "02",
+      "name": "John",
+      "surname": "Smith",
+      "email": "Smith@google.com",
+      "age": 24,
+      "country": "Mexico",
+      "city": "Chetumal"
+    },
+     {
+      "id": "03",
+      "name": "Brus",
+      "surname": "Duck",
+      "email": "Brus@icloud.com",
+      "age": 31,
+      "country": "Spain",
+      "city": "Madrid"
+    },
+     {
+      "id": "04",
+      "name": "Bob",
+      "surname": "Dunkan",
+      "email": "BDunkan@google.com",
+      "age": 39,
+      "country": "Germany",
+      "city": "Berlin"
+    },
+     {
+      "id": "05",
+      "name": "Jimmy",
+      "surname": "Scott",
+      "email": "Scott@google.com",
+      "age": 29,
+      "country": "Great Britain",
+      "city": "London"
+    },
+    {
+      "id": "06",
+      "name": "MMM",
+      "surname": "SSS",
+      "email": "Sqqewqe@google.com",
+      "age": 44,
+      "country": "Google",
+      "city": "Cityyy"
+    }
+  ]
+}
